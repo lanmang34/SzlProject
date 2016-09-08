@@ -1,9 +1,10 @@
-package com.szl.szlibrary.utils;
+package com.szl.szlproject.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.szl.szlibrary.base.SzlApplication;
+import com.szl.szlproject.base.BaseApplication;
+
 
 /**
  * Created by songziliang on 2016/9/1.
@@ -14,7 +15,7 @@ public class SPUtil {
     private static String defaultFileName = "config";
 
     private static Context getContext() {
-        return SzlApplication.getContext();
+        return BaseApplication.getContext();
     }
 
     public static void put(String key, Object value) {

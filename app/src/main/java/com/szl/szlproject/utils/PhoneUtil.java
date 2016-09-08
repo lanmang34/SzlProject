@@ -1,4 +1,4 @@
-package com.szl.szlibrary.utils;
+package com.szl.szlproject.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,8 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.widget.Toast;
 
-import com.szl.szlibrary.base.SzlApplication;
+import com.szl.szlproject.base.BaseApplication;
+
 
 /**
  * Created by songziliang on 2016/9/1.
@@ -15,7 +16,7 @@ import com.szl.szlibrary.base.SzlApplication;
 public class PhoneUtil {
 
     private static Context getContext() {
-        return SzlApplication.getContext();
+        return BaseApplication.getContext();
     }
 
     /**

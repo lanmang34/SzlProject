@@ -1,1 +1,1 @@
-include ':app', ':szlibrary'
+include ':app', ':test'

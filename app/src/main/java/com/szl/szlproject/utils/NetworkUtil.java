@@ -1,11 +1,12 @@
-package com.szl.szlibrary.utils;
+package com.szl.szlproject.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 
-import com.szl.szlibrary.base.SzlApplication;
+import com.szl.szlproject.base.BaseApplication;
+
 
 /**
  * Created by songziliang on 2016/9/1.
@@ -14,7 +15,7 @@ import com.szl.szlibrary.base.SzlApplication;
 public class NetworkUtil {
 
     private static Context getContext(){
-        return SzlApplication.getContext();
+        return BaseApplication.getContext();
     }
 
     /*

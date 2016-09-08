@@ -1,4 +1,4 @@
-package com.szl.szlibrary.utils;
+package com.szl.szlproject.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

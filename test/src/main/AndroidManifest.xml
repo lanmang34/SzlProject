@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.szl.szlproject">
+          package="com.szl.test">
 
     <application
-        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,7 +22,9 @@
             android:exported="true">
         </service>
 
-        <activity android:name=".ui.GuideActivity">
+        <activity android:name=".service.TestServiceActivity">
+        </activity>
+        <activity android:name=".base.Main2Activity">
         </activity>
     </application>
 

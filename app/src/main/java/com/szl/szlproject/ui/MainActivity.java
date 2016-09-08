@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.szl.szlibrary.base.SzlActivity;
 import com.szl.szlproject.R;
+import com.szl.szlproject.base.BaseActivity;
 
-public class MainActivity extends SzlActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,8 @@ public class MainActivity extends SzlActivity {
     @Override
     protected void onDestroy() {
         if (mHandler != null) {
-
+            mHandler.removeCallbacksAndMessages(null);
+            mHandler = null;
         }
         super.onDestroy();
     }
