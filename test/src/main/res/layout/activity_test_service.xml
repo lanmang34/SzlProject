@@ -8,25 +8,25 @@
     tools:context="com.szl.test.service.TestServiceActivity">
 
     <Button
-        android:text="startService"
+        android:text="start Service"
         android:onClick="startService"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
 
     <Button
-        android:text="stopService"
+        android:text="stop Service"
         android:onClick="stopService"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
 
     <Button
-        android:text="bindService"
+        android:text="bind Service"
         android:onClick="bindService"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
 
     <Button
-        android:text="unBindService"
+        android:text="unBind Service"
         android:onClick="unBindService"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>

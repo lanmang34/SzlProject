@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.szl.test.base.BaseActivity;
 import com.szl.test.common.Constants;
@@ -26,15 +27,20 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("练习用APP");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lv_test = (ListView)findViewById(R.id.lv_test);
+
         //load data.
         loadData();
 
         TestAdapter adapter = new TestAdapter();
         lv_test.setAdapter(adapter);
+    }
+
+    @Override
+    public void setTitle(TextView tv_title) {
+        tv_title.setText("练习用app");
     }
 
     /**
