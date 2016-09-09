@@ -19,6 +19,13 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
+    /**
+     * 添加练习页
+     */
+    private void loadData() {
+        add("练习Service", TestServiceActivity.class);
+    }
+
     //View.
     private ListView lv_test;
 
@@ -41,13 +48,6 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setTitle(TextView tv_title) {
         tv_title.setText("练习用app");
-    }
-
-    /**
-     * 添加练习页
-     */
-    private void loadData() {
-        add("练习Service", TestServiceActivity.class);
     }
 
     private void add(String name, Class aClass) {
