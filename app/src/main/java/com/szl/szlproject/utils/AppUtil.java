@@ -2,6 +2,7 @@ package com.szl.szlproject.utils;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
@@ -31,6 +32,15 @@ public class AppUtil {
             }
         }
         return "";
+    }
+
+    /**
+     * 获取设备号
+     * @return
+     */
+    public static String getDeviceID() {
+        TelephonyManager tm = (TelephonyManager)getContext().getSystemService(Context.TELEPHONY_SERVICE);
+        return tm.getDeviceId();
     }
 
     /**
