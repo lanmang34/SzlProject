@@ -2,8 +2,10 @@ package com.szl.test.base;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -14,7 +16,7 @@ import com.szl.test.common.Constants;
 /**
  * Created by songziliang on 2016/9/8.
  */
-public abstract class LogActivity extends BaseActivity {
+public abstract class LogActivity extends BaseActivity implements OnClickListener {
 
     //view.
     private TextView tv_log;
@@ -23,6 +25,7 @@ public abstract class LogActivity extends BaseActivity {
 
     //data.
     private static Handler mHandler = new Handler();
+    private boolean mIsHide;
 
     @Override
     public void setContentView(int layoutResID) {
@@ -51,12 +54,19 @@ public abstract class LogActivity extends BaseActivity {
         ll_log = (LinearLayout) findViewById(R.id.ll_log);
         sv_log = (ScrollView) findViewById(R.id.sv_log);
         tv_log = (TextView)findViewById(R.id.tv_log);
+        findViewById(R.id.btn_clear_log).setOnClickListener(this);
         ScrollView sv_container = (ScrollView) findViewById(R.id.sv_container);
         View childeView = LayoutInflater.from(this).inflate(layoutResID, null);
         sv_container.addView(childeView, 0);
     }
 
     public void setLog(String log) {
+        if (mIsHide) {
+            Log.e("SZL-TAG", log + " | Activity已经销毁，手机屏不能显示该log");
+            return;
+        }else{
+            Log.e("SZL-TAG", log);
+        }
         tv_log.append("\n" + log);
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -95,10 +105,16 @@ public abstract class LogActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        if (mHandler != null) {
-            mHandler.removeCallbacksAndMessages(null);
-            mHandler = null;
-        }
+        mIsHide = true;
         super.onDestroy();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_clear_log :
+                clearLog();
+                break;
+        }
     }
 }

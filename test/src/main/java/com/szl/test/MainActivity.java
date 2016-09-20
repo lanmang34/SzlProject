@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.szl.test.base.BaseActivity;
 import com.szl.test.common.Constants;
-import com.szl.test.service.TestServiceActivity;
+import com.szl.test.test.fragment.TestFragmentActivity;
+import com.szl.test.test.mvp.TestMVPActivity;
+import com.szl.test.test.service.TestServiceActivity;
+import com.szl.test.test.sort.TestSortActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,9 @@ public class MainActivity extends BaseActivity {
      */
     private void loadData() {
         add("练习Service", TestServiceActivity.class);
+        add("练习MVP模式", TestMVPActivity.class);
+        add("练习排序", TestSortActivity.class);
+        add("练习fragment生命周期", TestFragmentActivity.class);
     }
 
     //View.

@@ -1,4 +1,4 @@
-package com.szl.test.service;
+package com.szl.test.test.service;
 
 import android.content.ComponentName;
 import android.content.Intent;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tv_no_fragment"
+            android:layout_gravity="center_horizontal"
+            android:text="没有fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="replace1"
+        android:text="replace1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="replace2"
+        android:text="replace2"/>
+
+    <Button
+        android:text="跳转SecondActivity测试覆盖情况下的生命周期"
+        android:onClick="startSecond"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>
