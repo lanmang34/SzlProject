@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".test.fragment.SecondActivity">
         </activity>
+        <activity android:name=".test.dataBinding.TestDataBindingActivity">
+        </activity>
     </application>
 
 </manifest>

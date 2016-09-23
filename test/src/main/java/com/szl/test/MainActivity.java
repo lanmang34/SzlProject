@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.szl.test.base.BaseActivity;
 import com.szl.test.common.Constants;
+import com.szl.test.test.dataBinding.TestDataBindingActivity;
 import com.szl.test.test.fragment.TestFragmentActivity;
 import com.szl.test.test.mvp.TestMVPActivity;
 import com.szl.test.test.service.TestServiceActivity;
@@ -30,6 +30,7 @@ public class MainActivity extends BaseActivity {
         add("练习MVP模式", TestMVPActivity.class);
         add("练习排序", TestSortActivity.class);
         add("练习fragment生命周期", TestFragmentActivity.class);
+        add("练习谷歌原生框架-dataBinding", TestDataBindingActivity.class);
     }
 
     //View.
@@ -49,11 +50,6 @@ public class MainActivity extends BaseActivity {
 
         TestAdapter adapter = new TestAdapter();
         lv_test.setAdapter(adapter);
-    }
-
-    @Override
-    public void setTitle(TextView tv_title) {
-        tv_title.setText("练习用app");
     }
 
     private void add(String name, Class aClass) {

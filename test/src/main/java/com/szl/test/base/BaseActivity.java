@@ -1,16 +1,19 @@
 package com.szl.test.base;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.szl.test.R;
+import com.szl.test.common.Constants;
 
 /**
  * Created by songziliang on 2016/9/8.
@@ -61,5 +64,15 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 设置头部
      */
-    public abstract void setTitle(TextView tv_title);
+    public void setTitle(TextView tv_title) {
+        Intent intent = getIntent();
+        if (intent != null) {
+            String title = intent.getStringExtra(Constants.TITLE);
+            if (TextUtils.isEmpty(title)) {
+                tv_title.setText("练习用app");
+            }else{
+                tv_title.setText(title);
+            }
+        }
+    }
 }

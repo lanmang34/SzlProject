@@ -1,6 +1,5 @@
 package com.szl.test.base;
 
-import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,7 +10,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.szl.test.R;
-import com.szl.test.common.Constants;
 
 /**
  * Created by songziliang on 2016/9/8.
@@ -33,17 +31,6 @@ public abstract class LogActivity extends BaseActivity implements OnClickListene
 
         //初始化默认布局
         initDefaultView(layoutResID);
-    }
-
-    @Override
-    public void setTitle(TextView tv_title) {
-        Intent intent = getIntent();
-        if (intent != null) {
-            String title = intent.getStringExtra(Constants.TITLE);
-            tv_title.setText(title);
-        }else{
-            tv_title.setText("练习用app");
-        }
     }
 
     /**
