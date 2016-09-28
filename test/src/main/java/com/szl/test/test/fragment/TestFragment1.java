@@ -61,7 +61,7 @@ public class TestFragment1 extends LogFragment {
     @Override
     public void onStart() {
         super.onStart();
-        setLog("fragment1 onStop");
+        setLog("fragment1 onStart");
     }
 
     @Override

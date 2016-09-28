@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.szl.test.base.BaseActivity;
 import com.szl.test.common.Constants;
 import com.szl.test.test.dataBinding.TestDataBindingActivity;
+import com.szl.test.test.dialog.TestDialogActivity;
 import com.szl.test.test.fragment.TestFragmentActivity;
 import com.szl.test.test.mvp.TestMVPActivity;
 import com.szl.test.test.service.TestServiceActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends BaseActivity {
         add("练习排序", TestSortActivity.class);
         add("练习fragment生命周期", TestFragmentActivity.class);
         add("练习谷歌原生框架-dataBinding", TestDataBindingActivity.class);
+       add("练习 1像素 dialog", TestDialogActivity.class);
     }
 
     //View.
