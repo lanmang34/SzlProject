@@ -22,9 +22,7 @@ public class SPUtil {
         put(key, value, null);
     }
     public static void put(String key, Object value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
 
         if(value == null){
             remove(key, newFileName);
@@ -46,9 +44,7 @@ public class SPUtil {
         return getLong(key, value, null);
     }
     public static Long getLong(String key,long value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         return mPrefs.getLong(key, value);
     }
 
@@ -56,9 +52,7 @@ public class SPUtil {
         return getFloat(key, value, null);
     }
     public static float getFloat(String key,long value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         return mPrefs.getFloat(key, value);
     }
 
@@ -66,9 +60,7 @@ public class SPUtil {
         return getBoolean(key, value, null);
     }
     public static boolean getBoolean(String key,boolean value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         return mPrefs.getBoolean(key, value);
     }
 
@@ -76,9 +68,7 @@ public class SPUtil {
         return getString(key, value, null);
     }
     public static String getString(String key,String value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         return mPrefs.getString(key, value);
     }
 
@@ -86,9 +76,7 @@ public class SPUtil {
         return getInt(key, value, null);
     }
     public static Integer getInt(String key,int value, String newFileName){
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         return mPrefs.getInt(key, value);
     }
 
@@ -96,9 +84,7 @@ public class SPUtil {
         remove(name, null);
     }
     public static void remove(String name, String newFileName) {
-        if(mPrefs==null){
-            mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
-        }
+        mPrefs = getContext().getSharedPreferences(newFileName != null ? newFileName : defaultFileName, Context.MODE_PRIVATE);
         mPrefs.edit().remove(name).apply();
     }
 

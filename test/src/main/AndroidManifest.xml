@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.szl.test">
+    package="com.szl.test">
 
     <application
         android:name=".base.BaseApplication"
@@ -11,32 +11,25 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <service
             android:name=".test.service.TestService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"></service>
 
-        <activity android:name=".test.service.TestServiceActivity">
-        </activity>
-        <activity android:name=".test.mvp.TestMVPActivity">
-        </activity>
-        <activity android:name=".test.sort.TestSortActivity">
-        </activity>
-        <activity android:name=".test.fragment.TestFragmentActivity">
-        </activity>
-        <activity android:name=".test.fragment.SecondActivity">
-        </activity>
-        <activity android:name=".test.dataBinding.TestDataBindingActivity">
-        </activity>
-        <activity android:name=".test.dialog.TestDialogActivity">
-        </activity>
+        <activity android:name=".test.service.TestServiceActivity"></activity>
+        <activity android:name=".test.mvp.TestMVPActivity"></activity>
+        <activity android:name=".test.sort.TestSortActivity"></activity>
+        <activity android:name=".test.fragment.TestFragmentActivity"></activity>
+        <activity android:name=".test.fragment.SecondActivity"></activity>
+        <activity android:name=".test.dataBinding.TestDataBindingActivity"></activity>
+        <activity android:name=".test.dialog.TestDialogActivity"></activity>
+        <activity android:name=".test.authcode.RandomAuthCodeActivity"></activity>
     </application>
 
 </manifest>

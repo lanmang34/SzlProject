@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_random_auth_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.szl.test.test.authcode.RandomAuthCodeActivity">
+
+    <ImageView
+        android:id="@+id/iv_authcode"
+        android:layout_width="100dp"
+        android:layout_height="30dp" />
+
+    <Button
+        android:onClick="replaceAuthCode"
+        android:text="更换验证码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:id="@+id/et_authcode"
+        android:hint="请输入验证码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="检测验证码"
+        android:onClick="checkAuthCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
