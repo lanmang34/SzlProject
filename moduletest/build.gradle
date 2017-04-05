@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.parseInt(projectCompileSdkVersion)
+    buildToolsVersion projectBuildToolsVersion
+
+    defaultConfig {
+        applicationId "com.lanmang.moduletest"
+        minSdkVersion Integer.parseInt(projectMinSdkVersion)
+        targetSdkVersion Integer.parseInt(projectTargetSdkVersion)
+        versionCode Integer.parseInt(moduleVersionCode)
+        versionName moduleVersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    /*签名配置*/
+    signingConfigs {
+        release {
+            storeFile file('keystore.jks')
+            storePassword 'ok_insurance'
+            keyAlias 'OKInsurance'
+            keyPassword 'ok_insurance'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    testCompile 'junit:junit:4.12'
+    if (IsBuildModule.toBoolean()) {
+        compile project(':modulelib')
+    } else {
+        compile project(':modulea')
+        compile project(':moduleb')
+    }
+}

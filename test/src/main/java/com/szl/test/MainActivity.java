@@ -11,13 +11,19 @@ import android.widget.ListView;
 
 import com.szl.test.base.BaseActivity;
 import com.szl.test.common.Constants;
+import com.szl.test.test.activity.T1Activity;
 import com.szl.test.test.authcode.RandomAuthCodeActivity;
+import com.szl.test.test.constraintLayout.TestConstraintLayoutActivity;
 import com.szl.test.test.dataBinding.TestDataBindingActivity;
 import com.szl.test.test.dialog.TestDialogActivity;
 import com.szl.test.test.fragment.TestFragmentActivity;
 import com.szl.test.test.mvp.TestMVPActivity;
+import com.szl.test.test.recyclerview.TestRecyclerViewActivity;
 import com.szl.test.test.service.TestServiceActivity;
 import com.szl.test.test.sort.TestSortActivity;
+import com.szl.test.test.surface.MainGUI;
+import com.szl.test.test.surface.TestSurfaceActivity;
+import com.szl.test.test.toast.TestToastActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +41,12 @@ public class MainActivity extends BaseActivity {
         add("练习谷歌原生框架-dataBinding", TestDataBindingActivity.class);
         add("练习 1像素 dialog", TestDialogActivity.class);
         add("练习随机验证码", RandomAuthCodeActivity.class);
+        add("练习Surface", TestSurfaceActivity.class);
+        add("练习Surface2", MainGUI.class);
+        add("练习Toast", TestToastActivity.class);
+        add("练习约束布局-ConstraintLayout", TestConstraintLayoutActivity.class);
+        add("练习dialog", T1Activity.class);
+       add("练习RecyclerView-刷新", TestRecyclerViewActivity.class);
     }
 
     //View.

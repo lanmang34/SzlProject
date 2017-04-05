@@ -1,1 +1,6 @@
-include ':app', ':test'
+include ':app'
+include ':test'
+include ':modulea'
+include ':moduleb'
+include ':moduletest'
+include ':modulelib'
